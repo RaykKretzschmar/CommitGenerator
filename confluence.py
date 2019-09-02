@@ -6,12 +6,12 @@ import random
 email = "rkre75@gmail.com"
 
 # Set the start date to 3 years ago from today
-start_date = datetime.now() - timedelta(days=2*365)
+start_date = datetime.now() - timedelta(days=3.5*365)
 current_date = start_date
 
 commit_messages = ["updated", "removed unnecessary code", "bugfix", "refactor", "fix", "add feature"]
 
-while current_date < datetime.now():
+while current_date < datetime.now() - timedelta(days=3*365):
     # Create a fake commit for each day with a random commit message
     date = current_date.strftime('%m/%d/%Y %H:%M:%S')
     commit_message = random.choice(commit_messages)
