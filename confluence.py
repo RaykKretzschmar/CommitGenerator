@@ -24,7 +24,7 @@ while current_date < datetime.now():
     os.system('git push origin main')
     
     # Increment the current date by one day
-    current_date += timedelta(days=1)
+    current_date += timedelta(days=random.randint(0, 5))
 
 # Set your Git config email back to your original email
 os.system(f'git config --global user.email "{email}"')
