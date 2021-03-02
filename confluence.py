@@ -6,7 +6,7 @@ import random
 email = "rkre75@gmail.com"
 
 # Set the start date to 3 years ago from today
-start_date = datetime.now() - timedelta(days=3*365)
+start_date = datetime.now() - timedelta(days=2*365)
 current_date = start_date
 
 commit_messages = ["updated", "removed unnecessary code", "bugfix", "refactor", "fix", "add feature"]
@@ -24,7 +24,7 @@ while current_date < datetime.now():
     os.system('git push origin main')
     
     # Increment the current date by one day
-    current_date += timedelta(days=random.randint(0, 5))
+    current_date += timedelta(days=random.randint(0, 3))
 
 # Set your Git config email back to your original email
 os.system(f'git config --global user.email "{email}"')
