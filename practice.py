@@ -9,7 +9,8 @@ email = "rkre75@gmail.com"
 start_date = datetime.now() - timedelta(days=3.5*365)
 current_date = start_date
 
-commit_messages = ["updated", "removed unnecessary code", "bugfix", "refactor", "fix", "add feature"]
+commit_messages = ["updated", "removed unnecessary code",
+                   "bugfix", "refactor", "fix", "add feature"]
 
 while current_date < datetime.now() - timedelta(days=3*365):
     # Create a fake commit for each day with a random commit message
@@ -19,10 +20,10 @@ while current_date < datetime.now() - timedelta(days=3*365):
         file.write(date + '\n')
     os.system('git add .')
     os.system(f'git commit --date="{date}" -m "{commit_message}"')
-    
+
     # Push the commit to GitHub
     os.system('git push origin main')
-    
+
     # Increment the current date by one day
     current_date += timedelta(days=random.randint(0, 3))
 
