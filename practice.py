@@ -3,7 +3,7 @@ import os
 import random
 
 # Set your GitHub email
-email = "rkre75@gmail.com"
+email = input("Please enter your email: ")
 
 # Set the start date to 3 years ago from today
 start_date = datetime.now() - timedelta(days=3.5*365)
